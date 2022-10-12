@@ -36,14 +36,11 @@ app.get("/beers", (req,res)=>{
   .then((response)=>{
     //console.log(response)
 
-    res.render("beers.hbs", {
+    res.render("beers.hbs",{
       beersArr : response
     })
 
-    res.render("index.hbs", {
-      beersArr : response
     })
-  })
   .catch((error)=>{
     console.log(error)
   })
