@@ -5,3 +5,22 @@ dark-blue: #0a2c42;
 grey: #bfbfbf;
 font-family: Arial, Helvetica, sans-serif;
 */
+
+
+nav{
+background-color: light-blue #2081c3;
+
+
+
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+footer{
+    background-color: dark-blue #0a2c42;
+}
