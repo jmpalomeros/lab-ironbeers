@@ -3,14 +3,19 @@
 <h3>echate una birra</h3>
 <p>...</p>
 
-
+<ol>
 {{#each beersArr}}
 
-{{this.name}}
-{{this.image}}
+<li>{{this.name}}
+<img src="{{this.image_url}}" alt="beer">
 {{this.description}}
-{{this.tagline}}
+{{this.tagline}}</li>
+
+
 
 {{/each}}
+
+</ol>
+
 
 </div>

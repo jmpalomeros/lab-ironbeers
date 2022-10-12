@@ -35,6 +35,7 @@ app.get("/beers", (req,res)=>{
   punkAPI.getBeers()
   .then((response)=>{
     console.log(response)
+
     res.render("beers.hbs", {
       beersArr : response
     })
@@ -47,11 +48,7 @@ app.get("/beers", (req,res)=>{
 
 app.get("/random-beer",(req,res)=>{
 
-  punkAPI.
-
-  res.render("random-beer",{
-
-  })
+  res.render("random-beer.hbs")
 })
 
 
