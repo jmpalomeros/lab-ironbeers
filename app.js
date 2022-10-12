@@ -13,11 +13,6 @@ const punkAPI = new PunkAPIWrapper();
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 
-
-//data a utilizar
-
-
-
 app.use(express.static(path.join(__dirname, 'public')));
 
 
@@ -37,22 +32,22 @@ app.get('/', (req, res) => {
 
 app.get("/beers", (req,res)=>{
   
-  punkApi.getBeers()
-  .then((beersInfo)=>{
-    console.log(beersInfo)
+  punkAPI.getBeers()
+  .then((response)=>{
+    console.log(response)
+    res.render("beers.hbs", {
+      beersArr : response
+    })
     })
   .catch((error)=>{
     console.log(error)
   })
-  res.render("beers", {
-    
-   
-
-
-  })
+  
 })
 
 app.get("/random-beer",(req,res)=>{
+
+  punkAPI.
 
   res.render("random-beer",{
 
