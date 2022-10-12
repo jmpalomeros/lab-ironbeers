@@ -1,5 +1,22 @@
-<div id="main">
-    <img src="{{this.beerImage}}" alt="beer" width="100px">
-    <button id="beerArr">Check the Beers!</button>
-    <button id="beerRan">Check a Random Beer</button>
+<div id='main'>
+  <img src='{{this.beerImage}}' alt='beer' width='500px' />
+  <button class='button'>Check the Beers!
+    <ol>
+      {{#each beersArr}}
+
+        <li>{{this.name}}
+          <img src='{{this.image_url}}' alt='beer' width='100px' />
+          {{this.description}}
+          {{this.tagline}}</li>
+
+      {{/each}}
+
+    </ol>
+
+  </button>
+
+  <button class='button'>Check a Random Beer
+
+    
+  </button>
 </div>

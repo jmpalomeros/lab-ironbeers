@@ -34,12 +34,16 @@ app.get("/beers", (req,res)=>{
   
   punkAPI.getBeers()
   .then((response)=>{
-    console.log(response)
+    //console.log(response)
 
     res.render("beers.hbs", {
       beersArr : response
     })
+
+    res.render("index.hbs", {
+      beersArr : response
     })
+  })
   .catch((error)=>{
     console.log(error)
   })
@@ -48,7 +52,20 @@ app.get("/beers", (req,res)=>{
 
 app.get("/random-beer",(req,res)=>{
 
-  res.render("random-beer.hbs")
+  punkAPI.getRandom()
+  .then((data)=>{
+    //let randomPos = Math.floor(Math.random() * data.length)
+    
+    //let randomBeer = data[randomPos]
+    
+    res.render("random-beer.hbs", {
+      randomBeer : data
+    })
+  })
+ 
+  .catch((error)=>{
+    console.log(error)
+  })
 })
 
 

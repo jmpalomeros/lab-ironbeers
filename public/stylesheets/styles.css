@@ -22,7 +22,8 @@ body{
 }
 
 nav{
-margin: 1vh;
+margin-top: 0vh;
+margin-bottom:1vh ;
 padding-top: 3vh;
 position: fixed;
 top:0;
@@ -37,11 +38,15 @@ letter-spacing: 2px;
 nav a{
     text-decoration: none;
     color:white;
+    padding: 1vw;
 }
 #main{
+    margin-top: 5vh;
     display: flex;
     flex-direction: column;
     padding-top: 10vh;
+    
+    
 }
 footer{
 margin-bottom: 0;
@@ -50,10 +55,26 @@ position: fixed;
 bottom:0;
 width: 100%;
 display: flex;
-justify-content: space-around;
+justify-content:left;
 background-color: rgb(4, 4, 71);
-padding-bottom: 2vh;
-padding-top:2vh;
+padding: 2vw;
+
 }
 
+.button{
+    background-color: rgb(54, 122, 200);
+    color: white;
+    border-style: none;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+   font-weight: bold;
+      
+}
+
+.button:active {
+    background-color:rgb(4, 4, 71);
+    box-shadow: 0 5px #666;
+    transform: translateX(2px);
+  }
 
